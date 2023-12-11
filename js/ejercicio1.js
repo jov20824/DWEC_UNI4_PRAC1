@@ -56,21 +56,19 @@ function botonPrimera(){
 
 //Funcion que llama al metodo menorIndice al pulsar el botón anterior
 function botonAnterior(){
-    anterior.addEventListener('click' , clickAnterior);
-}
+    anterior.addEventListener('click' , function() {
 
-function clickAnterior() {
-
-    if(galeria.cursor>0){
-        ultima.className = "habilitado";
-        siguiente.className = "habilitado";
-        imagen.style.backgroundImage = "url("+(galeria.menorIndice())+")";
-    }
-    if(galeria.cursor<=0){
-        primera.className = "deshabilitado";
-        anterior.className = "deshabilitado";
-    }
-  
+        if(galeria.cursor>0){
+            ultima.className = "habilitado";
+            siguiente.className = "habilitado";
+            imagen.style.backgroundImage = "url("+(galeria.menorIndice())+")";
+        }
+        if(galeria.cursor<=0){
+            primera.className = "deshabilitado";
+            anterior.className = "deshabilitado";
+        }
+      
+    });
 }
 
 //Funcion que llama al metodo mayorIndice al pulsar el botón siguiente
